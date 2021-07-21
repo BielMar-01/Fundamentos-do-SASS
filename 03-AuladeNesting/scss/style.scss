@@ -1,3 +1,11 @@
+@mixin title-large {
+	font-size: 4em;
+	font-weight: bold;
+	font-family: monospace;
+	line-height: 1;
+}
+
+
 $cor-primaria: blue;
 $color-primaria: white;
 $font-primaria: monospace;
