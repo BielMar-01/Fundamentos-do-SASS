@@ -1,0 +1,50 @@
+$redes: facebook twitter pinteresr instagram;
+
+@each $rede in $redes {
+	.#{$redes}-icon {
+		background-image: url('../img/#{$rede}.png');
+	}
+}
+
+$n: 1;
+
+@while $n <= 6 {
+	.type-#{$n} {
+		font-size: 16 * $n + px;
+	}
+	$n: $n + 1;
+}
+
+@for $i from 1 through 16 {
+	$width: percentage($i / 16 * 1);
+	//$width: $i / 16 * 100 + %;
+	.grid-porcento-#{$i} {
+		width: $width;
+	}
+}
+
+@for $i from 1 through 12 {
+	$width: percentage(1 / $i);
+	.porcento-#{$i} {
+		width: $width;
+	}
+}
+
+$containder: 960;
+$containder-mobile: 768;
+$gutter: 20;
+$colunas: 12;
+
+@for $i from 1 through 12 {
+	$width: $containder / $colunas * $i - $gutter;
+	.grid-#{$i} {
+		width: $width + px;
+	}
+}
+
+@for $i from 1 through 12 {
+	$width: $containder-mobile / $colunas * $i - $gutter;
+	.grid-mobile-#{$i} {
+		width: $width + px;
+	}
+}
